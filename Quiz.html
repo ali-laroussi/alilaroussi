@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" src="contact_form_script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a class="logo"><span>Ali</span>Laroussi </a>
+
+        <nav class="navbar">
+            <a href="index.html">Acceuil</a>
+            <a href="Etudes.html">Etudes</a>
+            <a href="Passions.html">Passions</a>
+            <a href="Quiz.html" class="active">Quiz</a>
+            <a href="Contacter moi.html" class="Contact">Contacter moi</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h2>Quiz Culture Sportif :</h2>
+            <form id="quizForm" onsubmit="submitQuiz(event)">
+                <div class="question">
+                    <label for="q1a">1. Combien de fois l'équipe national de Tunisie était présent au coupe de monde
+                        ?</label><br>
+                    <input type="radio" id="q1a" name="q1" value="a"> 0<br>
+                    <input type="radio" id="q1b" name="q1" value="b"> 7<br>
+                    <input type="radio" id="q1c" name="q1" value="c"> 5<br>
+                </div>
+
+                <div class="question">
+                    <label for="q2a">2. Quel est le Meilleur buteur d'équipe national de Tunisie ?</label><br>
+                    <input type="radio" id="q2a" name="q2" value="a"> Wahbi khazri<br>
+                    <input type="radio" id="q2b" name="q2" value="b"> Issam Jomaa<br>
+                    <input type="radio" id="q2c" name="q2" value="c"> Youssef Msekni <br>
+                </div>
+
+                <div class="question">
+                    <label for="q3a">3. A quel année l'equipe National de Tunisie gagne le Coupe d'Afrique ?</label><br>
+                    <input type="radio" id="q3a" name="q3" value="a"> 2011<br>
+                    <input type="radio" id="q3b" name="q3" value="b"> 1998<br>
+                    <input type="radio" id="q3c" name="q3" value="c"> 2004<br>
+                </div>
+
+                <div class="question">
+                    <label for="q4a">4. Quel pays a gagne la Coupe du Monde de football en 2018 ? </label><br>
+                    <input type="radio" id="q4a" name="q4" value="a"> France<br>
+                    <input type="radio" id="q4b" name="q4" value="b"> Brésil<br>
+                    <input type="radio" id="q4c" name="q4" value="c"> Espagne<br>
+                </div>
+
+                <div class="question">
+                    <label for="q5a">5. Dans quel sport utilise-t-on un volant ?</label><br>
+                    <input type="radio" id="q5a" name="q5" value="a"> Badamination<br>
+                    <input type="radio" id="q5b" name="q5" value="b"> Natation<br>
+                    <input type="radio" id="q5c" name="q5" value="c"> Football<br>
+                </div>
+
+                <div class="question">
+                    <label for="q6a">6. Quelle est la durée d’un match de rugby ? </label><br>
+                    <input type="radio" id="q6a" name="q6" value="a"> 45 min<br>
+                    <input type="radio" id="q6b" name="q6" value="b"> 20 min<br>
+                    <input type="radio" id="q6c" name="q6" value="c"> 60 min<br>
+                </div>
+
+                <div class="question">
+                    <label for="q7a">7. Combien vaut de points un panier classique au basket ?</label><br>
+                    <input type="radio" id="q7a" name="q7" value="a"> 2 pts<br>
+                    <input type="radio" id="q7b" name="q7" value="b"> 3 pts<br>
+                    <input type="radio" id="q7c" name="q7" value="c"> 1 pts<br>
+                </div>
+
+                <div class="question">
+                    <label for="q8a">8. Quel athlète est connu pour ses records au 100 mètres en athlétisme ?
+                        ?</label><br>
+                    <input type="radio" id="q8a" name="q8" value="a"> Carl lewis<br>
+                    <input type="radio" id="q8b" name="q8" value="b"> Usain Bolt<br>
+                    <input type="radio" id="q8c" name="q8" value="c"> Mohamed Gamoudi<br>
+                </div>
+
+                <div class="question">
+                    <label for="q9a">9. Combien de joueurs composent une équipe de basket ?</label><br>
+                    <input type="radio" id="q9a" name="q9" value="a"> 6<br>
+                    <input type="radio" id="q9b" name="q9" value="b"> 5 <br>
+                    <input type="radio" id="q9c" name="q9" value="c"> 8<br>
+                </div>
+
+                <div class="question">
+                    <label for="q10a">10. Quel athlète a remporté 4 médailles d’or en natation aux JO 2024 ?</label><br>
+                    <input type="radio" id="q10a" name="q10" value="a"> Oussema Mellouli<br>
+                    <input type="radio" id="q10b" name="q10" value="b"> Michael Phelps<br>
+                    <input type="radio" id="q10c" name="q10" value="c"> Léon Marchand<br>
+                </div>
+
+                <br>
+                <button type="submit" class="btn-1" onclick="submitQuiz() ">Soumettre</button>
+                <br>
+            </form>
+
+            <div id="result"></div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <ul class="list">
+            <li><a href="https://www.facebook.com/profile.php?id=100082601359420"><i class='bx bxl-facebook'></i>
+                    Facebook</a></li>
+            <li><a href="https://www.instagram.com/ali_aroussi"><i class='bx bxl-instagram'></i> Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/laroussi-ali-326ba3340"><i class='bx bxl-linkedin-square'></i>
+                    linkedIn</a></li>
+
+        </ul>
+    </footer>
